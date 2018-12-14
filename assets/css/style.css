@@ -1,0 +1,37 @@
+
+ @import url('https://fonts.googleapis.com/css?family=Oswald');
+ body {
+    font-family: 'Oswald', sans-serif;
+ }
+ #background-image {
+    background-image: url("../images/star-wars.png"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.thumbnail {
+position: relative;
+margin:15px;
+}
+.characters {
+    width:150px;
+    border: 2px solid green;
+}
+.caption{
+    text-align:center;
+}
+.caption {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    background-color:#ffffff;
+    width: 100%;
+}
+.text {
+    color:#ffffff;
+    padding:20px;
+}
+#attack {
+    max-width:500px;
+}
