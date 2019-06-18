@@ -1,3 +1,4 @@
+// Initialize variables for character and game attributes 
 var obi = {hp:6300, attack:460, counter:950,name:"Obi-Wan Kenobi"};
 var rey = {hp:6600, attack:450, counter:900,name:"Rey"};
 var jabba = {hp:7800, attack:300, counter:800,name:"Jabba The Hutt"};
@@ -5,6 +6,8 @@ var palpatine = {hp:7600, attack:350, counter:830,name:"Emperor Palpatine"};
 var character;
 var attackCounter = 0;
 var enemy;
+
+// Functionality for setting player's character when clicked
 $(document).on('click', ".character-choice", function() {
 
 if($('#defender-selection').find('.defender-choice').length == 0 && $('#enemies-selection').find('.enemy-choice').length == 0 ) {
@@ -29,9 +32,10 @@ if($('#defender-selection').find('.defender-choice').length == 0 && $('#enemies-
         character = palpatine;
     }
     
+    // display Health points of chosen character
     $(this).find(".hp").text("HP " + character.hp);
 
-
+// set enemies based on all other characters
     $('.character-choice').not(this).each(function(i, obj) {
         $(this).removeClass('character-choice').addClass('enemy-choice');
         $("#enemies-selection" ).append($( this ).clone());
@@ -43,6 +47,8 @@ if($('#defender-selection').find('.defender-choice').length == 0 && $('#enemies-
     $(document).off('click', '.character-choice');
 });
 
+
+// Functionality for setting enemies when clicked
 $(document).on('click', ".enemy-choice", function() {
 
     
@@ -83,6 +89,7 @@ $(document).on('click', ".enemy-choice", function() {
 
 });
 
+// any time enemy is clicked, add the "attack" effect and calculate the remaining health points as result of attack damage
 function pulsateAttack() {
     var attackText = $("#attack");
   for(var i=0; i<3; i++) {
