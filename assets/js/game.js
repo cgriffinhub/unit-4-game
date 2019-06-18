@@ -89,7 +89,7 @@ $(document).on('click', ".enemy-choice", function() {
 
 });
 
-// any time enemy is clicked, add the "attack" effect and calculate the remaining health points as result of attack damage
+// any time enemy is clicked, add the "attack" effect
 function pulsateAttack() {
     var attackText = $("#attack");
   for(var i=0; i<3; i++) {
@@ -102,7 +102,8 @@ function pulsateAttack() {
     
 }
 
-
+/*  onclick event for attack. Caulculates the remaining health points as result of attack damage,
+or determines win/loss if attacker or defender HP =< 0 */
 $(document).on('click', "#attack", function() {
 
         if ($('#attack').text() === "YOU LOSE! PLAY AGAIN") {
