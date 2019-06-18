@@ -1,5 +1,6 @@
 # unit-4-game
 <h3>Star Wars RPG Game created with jQuery and image assets</h3>
+<a href="https://cgriffinhub.github.io/unit-4-game/" target="_blank">Play Game</a>
 <h4>Rules/Functions:</h4>
 <li>When the game starts, the player will choose a character by clicking on the fighter's picture. The player will fight as that character for the rest of the game.</li>
 <li>The player must then defeat all of the remaining fighters. Enemies should be moved to a different area of the screen.</li>
